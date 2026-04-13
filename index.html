@@ -4,142 +4,175 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cybersecurity Portfolio</title>
+
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0b1220;
+      background: linear-gradient(135deg, #0b1220, #0f1b33);
       color: #e6edf3;
       line-height: 1.6;
     }
 
     header {
-      background: #111a2e;
-      padding: 60px 20px;
       text-align: center;
+      padding: 80px 20px;
+      background: radial-gradient(circle at top, #182a4a, #0b1220);
     }
 
     header h1 {
-      margin: 0;
-      font-size: 42px;
+      font-size: 48px;
+      margin-bottom: 10px;
     }
 
     header p {
       font-size: 18px;
       color: #9fb3c8;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
     nav {
       display: flex;
       justify-content: center;
-      gap: 20px;
-      background: #0f1b33;
-      padding: 10px;
+      gap: 25px;
+      padding: 15px;
+      background: rgba(15, 27, 51, 0.9);
       position: sticky;
       top: 0;
+      backdrop-filter: blur(10px);
     }
 
     nav a {
       color: #e6edf3;
       text-decoration: none;
       font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #4ea1ff;
     }
 
     section {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 60px 20px;
     }
 
     h2 {
-      border-bottom: 2px solid #1f2a44;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
+      font-size: 28px;
+      border-left: 4px solid #4ea1ff;
+      padding-left: 10px;
+      margin-bottom: 25px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
 
     .card {
-      background: #111a2e;
+      background: rgba(17, 26, 46, 0.9);
       padding: 20px;
-      margin-bottom: 15px;
-      border-radius: 10px;
+      border-radius: 12px;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 12px;
+      background: #4ea1ff;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
     }
 
     footer {
       text-align: center;
       padding: 30px;
-      background: #111a2e;
+      background: #0b1220;
       color: #9fb3c8;
-    }
-
-    a {
-      color: #4ea1ff;
     }
   </style>
 </head>
 <body>
 
- <header>
+<header>
   <h1>Alena Ciarlo</h1>
-  <p>Aspiring Cybersecurity Analyst | Building Hands-On Security Skills | SOC & Networking Focus</p>
+  <p>Aspiring Cybersecurity Analyst | SOC Focus | Building Real-World Security Skills Through Hands-On Labs & Projects</p>
 </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<nav>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am building my career in cybersecurity with a focus on networking, Linux systems,
-      and ethical hacking. I enjoy learning how systems work and how to secure them against threats.
-    </p>
-  </section>
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am building my career in cybersecurity with a focus on networking, Linux systems, and security operations (SOC).
+    I enjoy learning how systems work, how attacks happen, and how to defend against them using real-world tools and labs.
+  </p>
+</section>
 
-  <section id="projects">
-    <h2>Projects</h2>
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
 
     <div class="card">
-  <h3>Home Network Security Lab</h3>
-  <p>Built a virtual lab using VirtualBox to simulate attacks and test firewall rules.</p>
-</div>
-
-<div class="card">
-  <h3>Python Password Strength Checker</h3>
-  <p>Tool that analyzes password strength based on length, complexity, and patterns.</p>
-</div>
-
-<div class="card">
-  <h3>TryHackMe Learning Path</h3>
-  <p>Completed beginner cybersecurity labs covering Linux, networking, and web vulnerabilities.</p>
-</div>
-
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="card">
-      <p>• Networking Fundamentals</p>
-      <p>• Linux Command Line</p>
-      <p>• Python Basics</p>
-      <p>• Cybersecurity Concepts</p>
+      <h3>Home Network Security Lab</h3>
+      <p>Simulated a home network environment using VirtualBox to test firewall rules and security configurations.</p>
+      <a class="btn" href="#">View Details</a>
     </div>
-  </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
     <div class="card">
-      <p>GitHub: <a href="#">https://github.com/AlenaCiarlo777</a></p>
-      <p>LinkedIn: <a href="#">https://www.linkedin.com/in/alenaciarlo777/</a></p>
-      <p>Medium: <a href="#">https://https://medium.com/@alenaciarlo777</a></p>
+      <h3>Python Password Checker</h3>
+      <p>Built a tool to analyze password strength based on entropy, length, and complexity patterns.</p>
+      <a class="btn" href="#">View Code</a>
     </div>
-  </section>
 
-  <footer>
-    <p>© 2026 Alena Ciarlo | Cybersecurity Portfolio</p>
-  </footer>
+    <div class="card">
+      <h3>TryHackMe Progress</h3>
+      <p>Completed beginner cybersecurity paths covering Linux, networking, and basic web exploitation.</p>
+      <a class="btn" href="#">View Profile</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card">Networking Fundamentals</div>
+    <div class="card">Linux Command Line</div>
+    <div class="card">Python Programming</div>
+    <div class="card">SOC Basics</div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p>GitHub: <a href="#">https://github.com/AlenaCiarlo777</a></p>
+    <p>LinkedIn: <a href="#">https://www.linkedin.com/in/alenaciarlo777/</a></p>
+    <p>Medium: <a href="#">https://medium.com/@alenaciarlo777</a></p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Alena Ciarlo | Cybersecurity Portfolio</p>
+</footer>
 
 </body>
 </html>
+
