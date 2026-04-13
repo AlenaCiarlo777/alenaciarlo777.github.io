@@ -1,65 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alena Ciarlo | Cybersecurity Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cybersecurity Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1220;
+      color: #e6edf3;
+      line-height: 1.6;
+    }
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: #e2e8f0;
-    text-align: center;
-}
+    header {
+      background: #111a2e;
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-.container {
-    padding: 40px 20px;
-}
+    header h1 {
+      margin: 0;
+      font-size: 42px;
+    }
 
-h1 {
-    font-size: 2.5em;
-}
+    header p {
+      font-size: 18px;
+      color: #9fb3c8;
+    }
 
-p {
-    font-size: 1.2em;
-    max-width: 600px;
-    margin: 20px auto;
-}
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background: #0f1b33;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+    }
 
-.links a {
-    display: block;
-    margin: 10px;
-    padding: 12px;
-    background: #1e293b;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-}
+    nav a {
+      color: #e6edf3;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-.links a:hover {
-    background: #334155;
-}
-</style>
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #1f2a44;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: #111a2e;
+      padding: 20px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #111a2e;
+      color: #9fb3c8;
+    }
+
+    a {
+      color: #4ea1ff;
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="container">
-    <h1>Hi, I'm Alena 👋</h1>
-    
-    <p>
-        I'm building my path in cybersecurity while sharing my journey through writing, 
-        personal growth, and real-life experiences.
-    </p>
+  <header>
+    <h1>Your Name</h1>
+    <p>Cybersecurity Student | Aspiring Security Analyst | Builder of Secure Systems</p>
+  </header>
 
-    <div class="links">
-        <a href="https://www.linkedin.com/in/alenaciarlo777" target="_blank">LinkedIn</a>
-        <a href="https://alenaciarlo777.medium.com" target="_blank">Medium</a>
-        <a href="https://github.com/AlenaCiarlo777" target="_blank">GitHub</a>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am building my career in cybersecurity with a focus on networking, Linux systems,
+      and ethical hacking. I enjoy learning how systems work and how to secure them against threats.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="card">
+      <h3>Password Strength Checker</h3>
+      <p>Python tool that evaluates password security based on length and complexity.</p>
     </div>
-</div>
+
+    <div class="card">
+      <h3>Home Lab Setup</h3>
+      <p>Built a virtual cybersecurity lab using VirtualBox to practice networking and security tools.</p>
+    </div>
+
+    <div class="card">
+      <h3>TryHackMe Writeups</h3>
+      <p>Documented learning progress and solutions from hands-on cybersecurity labs.</p>
+    </div>
+
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card">
+      <p>• Networking Fundamentals</p>
+      <p>• Linux Command Line</p>
+      <p>• Python Basics</p>
+      <p>• Cybersecurity Concepts</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>GitHub: <a href="#">https://github.com/yourusername</a></p>
+      <p>LinkedIn: <a href="#">https://linkedin.com/in/yourprofile</a></p>
+      <p>Medium: <a href="#">https://yourmediumlink</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Your Name | Cybersecurity Portfolio</p>
+  </footer>
 
 </body>
 </html>
