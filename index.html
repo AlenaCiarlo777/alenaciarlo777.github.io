@@ -7,8 +7,8 @@
 
   <style>
     :root {
-      --bg: #070b14;
-      --panel: rgba(17, 26, 46, 0.85);
+      --bg: #050914;
+      --panel: rgba(17, 26, 46, 0.75);
       --accent: #4ea1ff;
       --text: #e6edf3;
       --muted: #9fb3c8;
@@ -24,12 +24,33 @@
       font-family: Arial, sans-serif;
       background: radial-gradient(circle at top, #0f1b33, var(--bg));
       color: var(--text);
-      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Animated background grid */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      animation: gridMove 20s linear infinite;
+      opacity: 0.4;
+    }
+
+    @keyframes gridMove {
+      from { transform: translateY(0px); }
+      to { transform: translateY(60px); }
     }
 
     header {
       text-align: center;
-      padding: 90px 20px 60px;
+      padding: 100px 20px 60px;
       position: relative;
     }
 
@@ -38,17 +59,18 @@
       top: 0;
       left: 50%;
       transform: translateX(-50%);
-      width: 400px;
-      height: 400px;
+      width: 500px;
+      height: 500px;
       background: var(--accent);
-      filter: blur(140px);
-      opacity: 0.15;
+      filter: blur(160px);
+      opacity: 0.18;
       z-index: -1;
     }
 
     header h1 {
-      font-size: 52px;
+      font-size: 56px;
       letter-spacing: 1px;
+      animation: fadeIn 1s ease-in-out;
     }
 
     header p {
@@ -56,6 +78,12 @@
       color: var(--muted);
       max-width: 700px;
       margin: 10px auto 0;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     nav {
@@ -63,11 +91,12 @@
       justify-content: center;
       gap: 25px;
       padding: 15px;
-      background: rgba(10, 18, 35, 0.8);
-      backdrop-filter: blur(10px);
+      background: rgba(10, 18, 35, 0.85);
+      backdrop-filter: blur(12px);
       position: sticky;
       top: 0;
       z-index: 10;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
     nav a {
@@ -79,16 +108,17 @@
 
     nav a:hover {
       color: var(--accent);
+      text-shadow: 0 0 10px var(--accent);
     }
 
     section {
       max-width: 1000px;
       margin: auto;
-      padding: 70px 20px;
+      padding: 80px 20px;
     }
 
     h2 {
-      font-size: 30px;
+      font-size: 32px;
       margin-bottom: 25px;
       border-left: 4px solid var(--accent);
       padding-left: 12px;
@@ -102,16 +132,33 @@
 
     .card {
       background: var(--panel);
-      padding: 20px;
+      padding: 22px;
       border-radius: 14px;
       transition: 0.3s ease;
       border: 1px solid rgba(255,255,255,0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(78,161,255,0.15), transparent);
+      transition: 0.5s;
+    }
+
+    .card:hover::after {
+      left: 100%;
     }
 
     .card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-8px);
       border-color: var(--accent);
-      box-shadow: 0 10px 30px rgba(78,161,255,0.15);
+      box-shadow: 0 15px 40px rgba(78,161,255,0.2);
     }
 
     .btn {
@@ -128,11 +175,12 @@
 
     .btn:hover {
       background: #2f8fe6;
+      transform: scale(1.05);
     }
 
     .profile {
-      width: 90px;
-      height: 90px;
+      width: 95px;
+      height: 95px;
       border-radius: 50%;
       background: linear-gradient(135deg, #4ea1ff, #7c4dff);
       margin: 0 auto 20px;
@@ -142,14 +190,17 @@
       font-weight: bold;
       font-size: 22px;
       color: white;
+      box-shadow: 0 0 25px rgba(78,161,255,0.4);
     }
 
     footer {
       text-align: center;
-      padding: 30px;
+      padding: 40px;
       color: var(--muted);
       background: rgba(10,18,35,0.6);
+      border-top: 1px solid rgba(255,255,255,0.05);
     }
+
   </style>
 </head>
 <body>
@@ -158,7 +209,7 @@
   <div class="glow"></div>
   <div class="profile">AC</div>
   <h1>Alena Ciarlo</h1>
-  <p>Aspiring Cybersecurity Analyst | SOC Focus | Building Hands-On Security Skills Through Labs, Networking & Real Projects</p>
+  <p>Aspiring Cybersecurity Analyst | SOC Focus | Building Real-World Security Skills Through Labs & Projects</p>
 </header>
 
 <nav>
@@ -171,7 +222,7 @@
 <section id="about">
   <h2>About Me</h2>
   <p>
-    I am building a career in cybersecurity focused on SOC operations, networking, and Linux systems. I learn best through hands-on labs, real-world simulations, and building security tools from scratch.
+    I am building a cybersecurity career focused on SOC operations, networking, and hands-on labs. I enjoy breaking systems to understand how to defend them.
   </p>
 </section>
 
@@ -181,19 +232,19 @@
 
     <div class="card">
       <h3>Password Strength Checker</h3>
-      <p>Python tool that evaluates password strength using length, complexity, and entropy rules.</p>
+      <p>Python tool that evaluates password strength using entropy and complexity rules.</p>
       <a class="btn" href="https://github.com/alenaciarlo777/password-checker" target="_blank">View Code</a>
     </div>
 
     <div class="card">
       <h3>Home Network Security Lab</h3>
-      <p>Simulated a home network using VirtualBox to test firewall rules and security controls.</p>
+      <p>Virtual lab simulating real network environments for security testing and firewall practice.</p>
       <a class="btn" href="home-lab.html">View Details</a>
     </div>
 
     <div class="card">
       <h3>TryHackMe Progress</h3>
-      <p>Completed beginner cybersecurity paths covering Linux, networking, and exploitation basics.</p>
+      <p>Hands-on cybersecurity labs covering Linux, networking, and exploitation fundamentals.</p>
       <a class="btn" href="#">View Profile</a>
     </div>
 
@@ -203,10 +254,10 @@
 <section id="skills">
   <h2>Skills</h2>
   <div class="grid">
-    <div class="card">Networking Fundamentals</div>
-    <div class="card">Linux Command Line</div>
+    <div class="card">Networking</div>
+    <div class="card">Linux</div>
     <div class="card">Python Security Tools</div>
-    <div class="card">SOC Basics</div>
+    <div class="card">SOC Analysis</div>
   </div>
 </section>
 
