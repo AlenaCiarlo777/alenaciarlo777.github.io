@@ -2,25 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Home Network Lab</title>
+  <title>Home Network Security Lab</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #070b14;
+      color: #e6edf3;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    h1 {
+      color: #4ea1ff;
+      font-size: 36px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: #9fb3c8;
+    }
+
+    .card {
+      background: rgba(17,26,46,0.8);
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 20px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    a {
+      color: #4ea1ff;
+      text-decoration: none;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 14px;
+      background: #4ea1ff;
+      color: white;
+      border-radius: 8px;
+    }
+
+    .back:hover {
+      background: #2f8fe6;
+    }
+  </style>
 </head>
-<body style="font-family: Arial; background:#0b1220; color:white; padding:40px;">
+<body>
+
+<div class="container">
 
   <h1>Home Network Security Lab</h1>
+  <p>This project simulates a real home network environment using VirtualBox to study traffic flow, segmentation, and firewall behavior.</p>
 
-  <p>
-    This project simulates a home network environment using VirtualBox.
-    I used it to study firewall rules, network traffic behavior, and basic attack/defense concepts.
-  </p>
+  <div class="card">
+    <h2>🔍 What I Did</h2>
+    <ul>
+      <li>Built virtual Windows + Linux machines</li>
+      <li>Configured isolated network environment</li>
+      <li>Tested basic firewall rules</li>
+    </ul>
+  </div>
 
-  <h2>What I Learned</h2>
-  <ul>
-    <li>How virtual networks operate</li>
-    <li>Basic firewall configuration concepts</li>
-    <li>How devices communicate inside a LAN</li>
-  </ul>
+  <div class="card">
+    <h2>🧠 What I Learned</h2>
+    <ul>
+      <li>How LAN traffic flows between devices</li>
+      <li>How segmentation improves security</li>
+      <li>Basic defensive security concepts</li>
+    </ul>
+  </div>
 
-  <a href="index.html" style="color:#4ea1ff;">← Back to Portfolio</a>
+  <a class="back" href="index.html">← Back to Portfolio</a>
+
+</div>
 
 </body>
 </html>
