@@ -139,8 +139,87 @@
 <div class="bg-grid"></div>
 
 <!-- TERMINAL STYLE INTRO -->
+<!-- TERMINAL STYLE INTRO (STABLE NEXT-GEN SOC BOOT SEQUENCE) -->
 <div class="terminal">
-  <div class="terminal-line">> booting cybersecurity portfolio...</div>
+  <div id="terminal-output"></div>
+  <div class="terminal-cursor">█</div>
+</div>
+
+<style>
+  .terminal {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+    margin: 120px auto 40px;
+    background: #0b1220;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    padding: 20px;
+    font-family: monospace;
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+    min-height: 180px;
+  }
+
+  .terminal-line {
+    color: #22c55e;
+    margin-bottom: 6px;
+    opacity: 0;
+    transform: translateY(6px);
+    animation: fadeInLine 0.4s forwards;
+  }
+
+  @keyframes fadeInLine {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .terminal-cursor {
+    display: inline-block;
+    color: #22c55e;
+    animation: blink 1s infinite;
+    margin-top: 5px;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+</style>
+
+<script>
+(function () {
+  const lines = [
+    "> initializing secure shell environment...",
+    "> loading SOC analyst dashboard...",
+    "> syncing threat intelligence feeds...",
+    "> scanning network security modules...",
+    "> deploying intrusion detection systems...",
+    "> verifying encryption protocols...",
+    "> system integrity: OK",
+    "> access level: AUTHORIZED"
+  ];
+
+  const output = document.getElementById("terminal-output");
+  const cursor = document.querySelector(".terminal-cursor");
+  let i = 0;
+
+  function addLine() {
+    if (i < lines.length) {
+      const div = document.createElement("div");
+      div.className = "terminal-line";
+      div.textContent = lines[i];
+      output.appendChild(div);
+      i++;
+      setTimeout(addLine, 650);
+    } else {
+      cursor.style.marginLeft = "5px";
+    }
+  }
+
+  window.addEventListener("load", addLine);
+})();
+</script>
   <div class="terminal-line">> loading SOC analyst profile...</div>
   <div class="terminal-line">> initializing ethical hacking modules...</div>
   <div class="terminal-line">> access granted <span class="cursor"> </span></div>
