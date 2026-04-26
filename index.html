@@ -6,12 +6,9 @@
 
   <title>Alena Ciarlo | Cybersecurity Portfolio | SOC Analyst & Ethical Hacker</title>
 
-  <meta name="description" content="Cybersecurity portfolio of Alena Ciarlo featuring SOC analysis, ethical hacking, penetration testing, security dashboards, and cybersecurity writeups." />
-  <meta name="keywords" content="cybersecurity portfolio, SOC analyst, ethical hacking, penetration testing, network security, cybersecurity dashboard, security operations center, Python security" />
+  <meta name="description" content="Cybersecurity portfolio of Alena Ciarlo showcasing SOC analysis, ethical hacking, penetration testing, and security projects." />
+  <meta name="keywords" content="cybersecurity portfolio, SOC analyst, ethical hacking, penetration testing, network security, Python security" />
   <meta name="author" content="Alena Ciarlo" />
-
-  <meta property="og:title" content="Alena Ciarlo | Cybersecurity Portfolio" />
-  <meta property="og:description" content="SOC-style cybersecurity portfolio with interactive terminal, dashboards, and security engineering projects." />
 
   <meta name="theme-color" content="#050814" />
 
@@ -19,56 +16,52 @@
 
   <style>
     *{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}
-
-    body{
-      background:#050814;
-      color:#e5e7eb;
-      overflow-x:hidden;
-    }
-
+    body{background:#050814;color:#e5e7eb}
     a{color:#60a5fa;text-decoration:none}
 
-    .bg-grid{
-      position:fixed;inset:0;
-      background-image:linear-gradient(rgba(255,255,255,0.04)1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04)1px,transparent 1px);
-      background-size:50px 50px;
-      animation:move 30s linear infinite;
-      z-index:0;
-    }
+    .wrap{max-width:1100px;margin:auto;padding:20px}
 
-    @keyframes move{from{transform:translateY(0)}to{transform:translateY(-50px)}}
-
+    /* HEADER */
     header{
       text-align:center;
-      padding:90px 20px 20px;
-      position:relative;
-      z-index:2;
+      padding:70px 20px 30px;
     }
-
     header h1{font-size:3rem}
     header p{color:#94a3b8;margin-top:8px}
 
+    /* CTA BUTTONS */
+    .cta{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:10px;
+      margin-top:20px;
+    }
+    .btn{
+      padding:10px 14px;
+      background:#2563eb;
+      border-radius:8px;
+      color:white;
+      font-size:0.9rem;
+      transition:0.2s;
+    }
+    .btn:hover{transform:scale(1.05)}
+
+    /* NAV */
     nav{
-      position:sticky;top:0;z-index:3;
-      display:flex;justify-content:center;gap:16px;
+      display:flex;
+      justify-content:center;
+      gap:15px;
       padding:12px;
-      background:rgba(17,24,39,0.85);
+      background:rgba(17,24,39,0.9);
+      position:sticky;
+      top:0;
       backdrop-filter:blur(10px);
     }
 
-    section{
-      max-width:1100px;
-      margin:auto;
-      padding:60px 20px;
-      position:relative;
-      z-index:2;
-    }
+    section{padding:60px 20px}
 
-    h2{
-      border-left:4px solid #60a5fa;
-      padding-left:10px;
-      margin-bottom:20px;
-    }
+    h2{border-left:4px solid #60a5fa;padding-left:10px;margin-bottom:20px}
 
     .card{
       background:#0b1220;
@@ -76,12 +69,7 @@
       padding:16px;
       border-radius:12px;
       margin-bottom:12px;
-      transition:0.3s;
     }
-
-    .card:hover{transform:translateY(-4px);border-color:#60a5fa}
-
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
 
     /* TERMINAL */
     .terminal{
@@ -89,156 +77,143 @@
       border:1px solid #1f2937;
       border-radius:12px;
       padding:15px;
-      max-width:850px;
-      margin:30px auto;
       font-family:monospace;
     }
 
-    .terminal-output{min-height:140px;color:#22c55e;margin-bottom:10px}
+    .terminal-output{min-height:120px;color:#22c55e}
 
-    .terminal-input{display:flex;gap:10px}
+    .terminal-input{
+      display:flex;
+      gap:8px;
+      margin-top:10px;
+    }
 
     .terminal-input span{color:#22c55e}
 
     .terminal-input input{
-      flex:1;background:transparent;border:none;
-      color:#e5e7eb;outline:none;font-family:monospace
+      flex:1;
+      background:transparent;
+      border:none;
+      color:#e5e7eb;
+      outline:none;
     }
 
-    /* DASHBOARD */
-    .dashboard{
+    .link-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
       gap:12px;
+      margin-top:20px;
     }
 
-    .metric{
+    .link-card{
       background:#0b1220;
       border:1px solid #1f2937;
-      padding:16px;
+      padding:15px;
       border-radius:12px;
-      text-align:center;
-    }
-
-    .bar{
-      height:8px;
-      background:#1f2937;
-      border-radius:5px;
-      overflow:hidden;
-      margin-top:8px;
-    }
-
-    .fill{
-      height:100%;
-      background:#22c55e;
-      width:70%;
-    }
-
-    .btn{
-      display:inline-block;
-      padding:10px 14px;
-      background:#2563eb;
-      border-radius:8px;
-      color:#fff;
-      margin-top:10px;
     }
 
     footer{text-align:center;padding:40px;color:#64748b}
-
-    .seo{font-size:1px;color:#050814}
   </style>
 </head>
 
 <body>
 
-<div class="bg-grid"></div>
+<div class="wrap">
 
 <header>
   <h1>Alena Ciarlo</h1>
-  <p>SOC Analyst • Ethical Hacker • Security Engineer</p>
+  <p>SOC Analyst • Ethical Hacker • Cybersecurity Engineer</p>
+
+  <!-- REAL FUNCTIONAL CTA -->
+  <div class="cta">
+    <a class="btn" href="mailto:theinformedfeline@duck.com">Email Me</a>
+    <a class="btn" href="https://www.linkedin.com/in/alenaciarlo777/" target="_blank">LinkedIn</a>
+    <a class="btn" href="https://github.com/alenaciarlo777" target="_blank">GitHub</a>
+  </div>
 </header>
 
 <nav>
   <a href="#terminal">Terminal</a>
-  <a href="#dashboard">Dashboard</a>
   <a href="#projects">Projects</a>
-  <a href="#blog">Threat Intel Blog</a>
-  <a href="#resume">Resume</a>
+  <a href="#links">Links</a>
   <a href="#contact">Contact</a>
 </nav>
 
-<!-- TERMINAL -->
+<!-- TERMINAL (NOW FUNCTIONAL) -->
 <section id="terminal">
   <h2>Interactive SOC Terminal</h2>
+
   <div class="terminal">
     <div id="out" class="terminal-output"></div>
+
     <div class="terminal-input">
       <span>$</span>
-      <input id="cmd" placeholder="scan | help | about | intel" />
+      <input id="cmd" placeholder="type: help, github, linkedin, contact, scan" />
     </div>
-  </div>
-</section>
-
-<!-- DASHBOARD -->
-<section id="dashboard">
-  <h2>Security Operations Dashboard</h2>
-  <div class="dashboard">
-
-    <div class="metric">
-      Threat Detection
-      <div class="bar"><div class="fill" style="width:78%"></div></div>
-    </div>
-
-    <div class="metric">
-      Network Integrity
-      <div class="bar"><div class="fill" style="width:92%"></div></div>
-    </div>
-
-    <div class="metric">
-      Incident Response
-      <div class="bar"><div class="fill" style="width:84%"></div></div>
-    </div>
-
-    <div class="metric">
-      Attack Surface
-      <div class="bar"><div class="fill" style="width:65%"></div></div>
-    </div>
-
   </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
   <h2>Projects</h2>
+
   <div class="card">
-    <h3>Password Strength Analyzer</h3>
-    <p>Python-based security assessment tool for password vulnerability detection.</p>
-    <a class="btn" href="https://github.com/alenaciarlo777/password-checker">View</a>
+    <h3>Password Strength Checker</h3>
+    <p>Python tool analyzing password security weaknesses.</p>
+    <a href="https://github.com/alenaciarlo777/password-checker">View GitHub</a>
   </div>
 </section>
 
-<!-- BLOG / SEO ENGINE -->
-<section id="blog">
-  <h2>Threat Intelligence Blog</h2>
+<!-- LINKS HUB (REAL VALUE SECTION) -->
+<section id="links">
+  <h2>Professional Links</h2>
 
-  <div class="card">
-    <h3>How SOC Analysts Detect Threats in Real Time</h3>
-    <p>Breaking down log correlation, anomaly detection, and SIEM workflows.</p>
-  </div>
+  <div class="link-grid">
+    <div class="link-card">
+      <h3>LinkedIn</h3>
+      <a href="https://www.linkedin.com/in/alenaciarlo777/" target="_blank">View Profile</a>
+    </div>
 
-  <div class="card">
-    <h3>Beginner Guide to Penetration Testing</h3>
-    <p>Understanding reconnaissance, exploitation, and reporting phases.</p>
-  </div>
+    <div class="link-card">
+      <h3>GitHub</h3>
+      <a href="https://github.com/alenaciarlo777" target="_blank">View Repos</a>
+    </div>
 
-  <div class="card">
-    <h3>Network Security Fundamentals</h3>
-    <p>Firewalls, IDS systems, and modern defensive architecture.</p>
+    <div class="link-card">
+      <h3>Email</h3>
+      <a href="mailto:theinformedfeline@duck.com">Send Email</a>
+    </div>
   </div>
 </section>
 
-<!-- RESUME -->
-<section id="resume">
-  <h2>Resume</h2>
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
   <div class="card">
-    <p>Download or view my cybersecurity resume tailored for SOC and sec
+    Direct contact for cybersecurity roles, internships, and collaborations.
+  </div>
+</section>
+
+<footer>© 2026 Alena Ciarlo | SOC Cybersecurity Portfolio</footer>
+
+</div>
+
+<script>
+const out=document.getElementById("out");
+const cmd=document.getElementById("cmd");
+
+function log(t){
+  const d=document.createElement("div");
+  d.textContent=t;
+  out.appendChild(d);
+}
+
+cmd.addEventListener("keydown",e=>{
+  if(e.key=="Enter"){
+    let v=cmd.value.toLowerCase();
+    log("$ "+v);
+
+    if(v=="help") log("commands: github, linkedin, contact, scan, projects");
+    else if(v=="github") window.open("https://github.com/alenaciarlo777","_blank");
+    else if(v=="linkedin") window.open("https://www.linkedin.com/in/alenaciarlo777/","_blank");
+    else if(v=="contact") wind
