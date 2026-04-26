@@ -1,42 +1,90 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>How SOC Analysts Detect Cyber Threats in Real Time</title>
+  <title>SOC Analyst Guide: How Threat Detection Works</title>
 
-  <meta name="description" content="Learn how SOC analysts detect cyber threats using log analysis, SIEM tools, and real-time monitoring techniques in cybersecurity operations." />
-  <meta name="keywords" content="SOC analyst, threat detection, SIEM, cybersecurity monitoring, log analysis, incident response" />
+  <meta name="description" content="Learn how SOC analysts detect cyber threats using SIEM tools, log analysis, and real-time monitoring techniques." />
+  <meta name="keywords" content="SOC analyst, threat detection, SIEM, cybersecurity monitoring, log analysis" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}
+    body{background:#050814;color:#e5e7eb}
+
+    nav{
+      display:flex;justify-content:center;gap:14px;
+      padding:12px;background:rgba(17,24,39,0.9);
+      position:sticky;top:0;backdrop-filter:blur(10px)
+    }
+
+    a{color:#60a5fa;text-decoration:none}
+
+    .wrap{max-width:900px;margin:auto;padding:40px 20px}
+
+    h1{font-size:2.2rem;margin-bottom:10px}
+    h2{margin-top:30px;border-left:4px solid #60a5fa;padding-left:10px}
+
+    p{margin-top:10px;line-height:1.6;color:#cbd5e1}
+
+    .card{
+      background:#0b1220;
+      border:1px solid #1f2937;
+      padding:16px;
+      border-radius:12px;
+      margin-top:20px;
+    }
+
+    .tag{
+      display:inline-block;
+      margin-top:15px;
+      padding:4px 8px;
+      font-size:0.8rem;
+      background:#1f2937;
+      border-radius:6px;
+      color:#93c5fd;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>How SOC Analysts Detect Cyber Threats in Real Time</h1>
 
+<nav>
+  <a href="/">Home</a>
+  <a href="/#projects">Projects</a>
+  <a href="/#terminal">Terminal</a>
+  <a href="/#contact">Contact</a>
+</nav>
+
+<div class="wrap">
+
+<h1>How SOC Analysts Detect Cyber Threats in Real Time</h1>
+
+<div class="card">
   <p>
-    A Security Operations Center (SOC) analyst is responsible for monitoring, detecting, and responding to cybersecurity threats in real time.
-    Their primary role is to identify suspicious activity before it becomes a full-scale security incident.
+    A SOC analyst monitors systems, networks, and logs to detect suspicious activity before it becomes a security incident.
   </p>
+</div>
 
-  <h2>1. Log Analysis</h2>
-  <p>
-    SOC analysts review logs from servers, firewalls, endpoints, and applications to detect abnormal behavior such as unauthorized access attempts or unusual traffic patterns.
-  </p>
+<h2>Log Analysis</h2>
+<p>
+Security logs from servers, endpoints, and firewalls are analyzed for anomalies like unauthorized access or unusual traffic patterns.
+</p>
 
-  <h2>2. SIEM Tools</h2>
-  <p>
-    Security Information and Event Management (SIEM) systems aggregate data from multiple sources and alert analysts when suspicious activity is detected.
-  </p>
+<h2>SIEM Systems</h2>
+<p>
+SIEM platforms collect and correlate data from multiple sources to detect patterns of malicious behavior.
+</p>
 
-  <h2>3. Threat Intelligence</h2>
-  <p>
-    Analysts use threat intelligence feeds to compare known malicious IPs, domains, and attack signatures against internal network activity.
-  </p>
+<h2>Threat Intelligence</h2>
+<p>
+Analysts compare activity against known malicious IPs, domains, and attack signatures.
+</p>
 
-  <h2>4. Incident Response</h2>
-  <p>
-    Once a threat is confirmed, SOC teams follow structured incident response procedures to isolate and mitigate the attack.
-  </p>
+<div class="tag">SOC • SIEM • Threat Detection</div>
 
-  <p><strong>Keywords:</strong> SOC analyst, cybersecurity monitoring, SIEM, threat detection</p>
+</div>
+
 </body>
 </html>
