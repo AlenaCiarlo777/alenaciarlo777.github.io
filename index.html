@@ -4,97 +4,111 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Primary SEO -->
   <title>Alena Ciarlo | Cybersecurity Portfolio | Ethical Hacking & Network Security</title>
-  <meta name="description" content="Cybersecurity portfolio of Alena Ciarlo specializing in ethical hacking, network security, SOC analysis, and cybersecurity operations. View projects, skills, and experience." />
-  <meta name="keywords" content="cybersecurity portfolio, ethical hacking, network security, SOC analyst, penetration testing, security operations, Alena Ciarlo" />
+
+  <meta name="description" content="Cybersecurity portfolio of Alena Ciarlo showcasing ethical hacking, network security, SOC analysis, Python security tools, and cybersecurity projects." />
+  <meta name="keywords" content="cybersecurity portfolio, ethical hacking, network security, SOC analyst, penetration testing, cybersecurity projects, Python security" />
   <meta name="author" content="Alena Ciarlo" />
 
-  <!-- Open Graph (for social sharing) -->
   <meta property="og:title" content="Alena Ciarlo | Cybersecurity Portfolio" />
-  <meta property="og:description" content="Cybersecurity portfolio showcasing ethical hacking, network security, and security operations projects." />
+  <meta property="og:description" content="Cybersecurity portfolio showcasing ethical hacking, SOC analysis, and security projects." />
   <meta property="og:type" content="website" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Performance hint -->
-  <meta name="theme-color" content="#0f172a" />
+  <meta name="theme-color" content="#0b1220" />
 
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
+    }
+
+    body {
+      background: #0b1220;
+      color: #e5e7eb;
       line-height: 1.6;
     }
 
+    a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+
     header {
-      padding: 60px 20px;
+      padding: 80px 20px;
       text-align: center;
-      background: #0b1220;
+      background: linear-gradient(180deg, #0f172a, #0b1220);
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-bottom: 10px;
     }
 
     header p {
-      max-width: 700px;
-      margin: 0 auto;
       color: #94a3b8;
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: auto;
     }
 
     nav {
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
       padding: 15px;
       background: #111827;
+      position: sticky;
+      top: 0;
     }
 
-    nav a {
-      color: #60a5fa;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
+    nav a:hover {
+      color: #93c5fd;
     }
 
     section {
       max-width: 900px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 60px 20px;
     }
 
     h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
       border-left: 4px solid #60a5fa;
       padding-left: 10px;
-      margin-bottom: 20px;
     }
 
     .card {
       background: #111827;
       padding: 20px;
+      border-radius: 12px;
       margin-bottom: 20px;
-      border-radius: 10px;
+      border: 1px solid #1f2937;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
     }
 
     footer {
       text-align: center;
-      padding: 30px;
-      font-size: 0.9rem;
+      padding: 40px;
       color: #64748b;
+      font-size: 0.9rem;
     }
   </style>
 
-  <!-- Structured Data for Google -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Alena Ciarlo",
     "jobTitle": "Cybersecurity Professional",
-    "description": "Cybersecurity specialist focused on ethical hacking, network security, and SOC operations.",
+    "description": "Cybersecurity portfolio focused on ethical hacking, SOC analysis, and network security.",
     "url": "https://alenaciarlo777.github.io"
   }
   </script>
@@ -104,7 +118,7 @@
 
 <header>
   <h1>Alena Ciarlo</h1>
-  <p>Cybersecurity Portfolio | Ethical Hacking • Network Security • SOC Operations</p>
+  <p>Cybersecurity Portfolio • Ethical Hacking • Network Security • SOC Operations</p>
 </header>
 
 <nav>
@@ -118,22 +132,21 @@
   <h2>About Me</h2>
   <div class="card">
     <p>
-      Cybersecurity professional focused on ethical hacking, penetration testing, and network defense.
-      Passionate about identifying vulnerabilities, strengthening systems, and improving digital security posture.
+      Cybersecurity enthusiast focused on ethical hacking, penetration testing, and network defense.
+      Passionate about identifying vulnerabilities and strengthening system security through hands-on projects and continuous learning.
     </p>
   </div>
 </section>
 
 <section id="skills">
   <h2>Skills</h2>
-  <div class="card">
-    <ul>
-      <li>Ethical Hacking & Penetration Testing</li>
-      <li>Network Security & Monitoring</li>
-      <li>Security Operations (SOC)</li>
-      <li>Incident Response</li>
-      <li>Python & Security Automation</li>
-    </ul>
+  <div class="grid">
+    <div class="card">Ethical Hacking</div>
+    <div class="card">Network Security</div>
+    <div class="card">SOC Analysis</div>
+    <div class="card">Incident Response</div>
+    <div class="card">Python Security Tools</div>
+    <div class="card">Vulnerability Assessment</div>
   </div>
 </section>
 
@@ -142,26 +155,28 @@
 
   <div class="card">
     <h3>Password Strength Checker</h3>
-    <p>Python tool that analyzes password strength and security risks.</p>
+    <p>Python tool that evaluates password strength and identifies security risks.</p>
+    <a href="https://github.com/alenaciarlo777/password-checker">View Project</a>
   </div>
 
   <div class="card">
-    <h3>Cybersecurity Portfolio Site</h3>
-    <p>Personal portfolio showcasing cybersecurity skills, labs, and projects.</p>
+    <h3>Cybersecurity Portfolio Website</h3>
+    <p>Personal portfolio built with GitHub Pages showcasing cybersecurity skills and projects.</p>
   </div>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
   <div class="card">
-    <p>Email: your-email@example.com</p>
-    <p>GitHub: https://github.com/alenaciarlo777</p>
-    <p>LinkedIn: add-your-link-here</p>
+    <p>Email: <a href="mailto:theinformedfeline@duck.com">theinformedfeline@duck.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/alenaciarlo777/" target="_blank">linkedin.com/in/alenaciarlo777</a></p>
+    <p>GitHub: <a href="https://github.com/alenaciarlo777">github.com/alenaciarlo777</a></p>
+    <p>Portfolio: <a href="https://alenaciarlo777.github.io">alenaciarlo777.github.io</a></p>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Alena Ciarlo | Cybersecurity Portfolio</p>
+  © 2026 Alena Ciarlo | Cybersecurity Portfolio
 </footer>
 
 </body>
