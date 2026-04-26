@@ -1,279 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta name="description" content="Cybersecurity portfolio showcasing SOC skills, Python security tools, networking labs, and hands-on cybersecurity projects by Alena Ciarlo." />
-  <meta name="google-site-verification" content="Pu5gDoJr0Jw7qxO5T5A_HnMmu9SbQgyq-CccR28K6o0" />
- <title><title>Alena Ciarlo | Cybersecurity Portfolio | SOC Analyst & Security Projects</title></title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>Alena Ciarlo | Cybersecurity Portfolio | Ethical Hacking & Network Security</title>
+  <meta name="description" content="Cybersecurity portfolio of Alena Ciarlo specializing in ethical hacking, network security, SOC analysis, and cybersecurity operations. View projects, skills, and experience." />
+  <meta name="keywords" content="cybersecurity portfolio, ethical hacking, network security, SOC analyst, penetration testing, security operations, Alena Ciarlo" />
+  <meta name="author" content="Alena Ciarlo" />
+
+  <!-- Open Graph (for social sharing) -->
+  <meta property="og:title" content="Alena Ciarlo | Cybersecurity Portfolio" />
+  <meta property="og:description" content="Cybersecurity portfolio showcasing ethical hacking, network security, and security operations projects." />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Performance hint -->
+  <meta name="theme-color" content="#0f172a" />
 
   <style>
-    :root {
-      --bg: #050914;
-      --panel: rgba(17, 26, 46, 0.75);
-      --accent: #4ea1ff;
-      --text: #e6edf3;
-      --muted: #9fb3c8;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      background: radial-gradient(circle at top, #0f1b33, var(--bg));
-      color: var(--text);
-      overflow-x: hidden;
-    }
-
-    /* Animated background grid */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-                        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-      background-size: 60px 60px;
-      pointer-events: none;
-      animation: gridMove 20s linear infinite;
-      opacity: 0.4;
-    }
-
-    @keyframes gridMove {
-      from { transform: translateY(0px); }
-      to { transform: translateY(60px); }
+      background: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.6;
     }
 
     header {
+      padding: 60px 20px;
       text-align: center;
-      padding: 100px 20px 60px;
-      position: relative;
-    }
-
-    .glow {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 500px;
-      height: 500px;
-      background: var(--accent);
-      filter: blur(160px);
-      opacity: 0.18;
-      z-index: -1;
+      background: #0b1220;
     }
 
     header h1 {
-      font-size: 56px;
-      letter-spacing: 1px;
-      animation: fadeIn 1s ease-in-out;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
     }
 
     header p {
-      font-size: 18px;
-      color: var(--muted);
       max-width: 700px;
-      margin: 10px auto 0;
-      animation: fadeIn 1.5s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+      margin: 0 auto;
+      color: #94a3b8;
     }
 
     nav {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
+      text-align: center;
       padding: 15px;
-      background: rgba(10, 18, 35, 0.85);
-      backdrop-filter: blur(12px);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+      background: #111827;
     }
 
     nav a {
-      color: var(--text);
+      color: #60a5fa;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: var(--accent);
-      text-shadow: 0 0 10px var(--accent);
     }
 
     section {
-      max-width: 1000px;
+      max-width: 900px;
       margin: auto;
-      padding: 80px 20px;
+      padding: 40px 20px;
     }
 
     h2 {
-      font-size: 32px;
-      margin-bottom: 25px;
-      border-left: 4px solid var(--accent);
-      padding-left: 12px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
+      border-left: 4px solid #60a5fa;
+      padding-left: 10px;
+      margin-bottom: 20px;
     }
 
     .card {
-      background: var(--panel);
-      padding: 22px;
-      border-radius: 14px;
-      transition: 0.3s ease;
-      border: 1px solid rgba(255,255,255,0.05);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(78,161,255,0.15), transparent);
-      transition: 0.5s;
-    }
-
-    .card:hover::after {
-      left: 100%;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      border-color: var(--accent);
-      box-shadow: 0 15px 40px rgba(78,161,255,0.2);
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 10px 14px;
-      background: var(--accent);
-      color: #fff;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 14px;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #2f8fe6;
-      transform: scale(1.05);
-    }
-
-    .profile {
-      width: 95px;
-      height: 95px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #4ea1ff, #7c4dff);
-      margin: 0 auto 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 22px;
-      color: white;
-      box-shadow: 0 0 25px rgba(78,161,255,0.4);
+      background: #111827;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
     }
 
     footer {
       text-align: center;
-      padding: 40px;
-      color: var(--muted);
-      background: rgba(10,18,35,0.6);
-      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 30px;
+      font-size: 0.9rem;
+      color: #64748b;
     }
-
   </style>
+
+  <!-- Structured Data for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alena Ciarlo",
+    "jobTitle": "Cybersecurity Professional",
+    "description": "Cybersecurity specialist focused on ethical hacking, network security, and SOC operations.",
+    "url": "https://alenaciarlo777.github.io"
+  }
+  </script>
 </head>
+
 <body>
 
 <header>
-  <div class="glow"></div>
-  <div class="profile">AC</div>
   <h1>Alena Ciarlo</h1>
-  <p>Aspiring Cybersecurity Analyst | SOC Analyst in Training | Python Security Tools | Networking & Hands-On Security Labs</p>
+  <p>Cybersecurity Portfolio | Ethical Hacking • Network Security • SOC Operations</p>
 </header>
 
 <nav>
   <a href="#about">About</a>
-  <a href="#projects">Projects</a>
   <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
   <a href="#contact">Contact</a>
 </nav>
 
 <section id="about">
   <h2>About Me</h2>
-  <p>
+  <div class="card">
     <p>
-I am a cybersecurity learner focused on SOC analysis, network security, and Python-based security tools. I build hands-on labs and real-world projects to develop skills in threat detection, system defense, and security operations.
-</p>
-  </p>
-</section>
-
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="grid">
-
-    <div class="card">
-      <h3>Password Strength Checker</h3>
-      <p>Python tool that evaluates password strength using entropy and complexity rules.</p>
-      <a class="btn" href="https://github.com/alenaciarlo777/password-checker" target="_blank">View Code</a>
-    </div>
-
-    <div class="card">
-      <h3>Home Network Security Lab</h3>
-      <p>Virtual lab simulating real network environments for security testing and firewall practice.</p>
-      <a class="btn" href="home-lab.html">View Details</a>
-    </div>
-
-    <div class="card">
-      <h3>TryHackMe Progress</h3>
-      <p>Hands-on cybersecurity labs covering Linux, networking, and exploitation fundamentals.</p>
-      <a class="btn" href="#">View Profile</a>
-    </div>
-
+      Cybersecurity professional focused on ethical hacking, penetration testing, and network defense.
+      Passionate about identifying vulnerabilities, strengthening systems, and improving digital security posture.
+    </p>
   </div>
 </section>
 
 <section id="skills">
   <h2>Skills</h2>
-  <div class="grid">
-    <div class="card">Networking</div>
-    <div class="card">Linux</div>
-    <div class="card">Python Security Tools</div>
-    <div class="card">SOC Analysis</div>
+  <div class="card">
+    <ul>
+      <li>Ethical Hacking & Penetration Testing</li>
+      <li>Network Security & Monitoring</li>
+      <li>Security Operations (SOC)</li>
+      <li>Incident Response</li>
+      <li>Python & Security Automation</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>Password Strength Checker</h3>
+    <p>Python tool that analyzes password strength and security risks.</p>
+  </div>
+
+  <div class="card">
+    <h3>Cybersecurity Portfolio Site</h3>
+    <p>Personal portfolio showcasing cybersecurity skills, labs, and projects.</p>
   </div>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
   <div class="card">
-    <p>GitHub: <a href="https://github.com/alenaciarlo777">View Profile</a></p>
-    <p>LinkedIn: <a href="#">https://www.linkedin.com/in/alenaciarlo777/</a></p>
-    <p>Medium: <a href="#">https://medium.com/@alenaciarlo777</a></p>
+    <p>Email: your-email@example.com</p>
+    <p>GitHub: https://github.com/alenaciarlo777</p>
+    <p>LinkedIn: add-your-link-here</p>
   </div>
 </section>
 
 <footer>
-  <p><p>© 2026 Alena Ciarlo | Cybersecurity Portfolio | SOC Analyst Training | GitHub Projects</p>
+  <p>© 2026 Alena Ciarlo | Cybersecurity Portfolio</p>
 </footer>
 
 </body>
